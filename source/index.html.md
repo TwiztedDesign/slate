@@ -74,6 +74,16 @@ vff.onEvent(cb, options)
 # Player control
 
 ## go
+```javascript
+vff('pagename', timecode)
+```
+Go to page
+
+* target - ***string*** - target page name
+* timecode - ***int*** - ***optional*** - target time if the target page is video
+
+
+
 ## next
 ## previous
 ## home
@@ -85,16 +95,25 @@ vff.onEvent(cb, options)
 vff.show(template)
 ```
 Set “visibility” property in the template to true
+
+* template - _string_ - the name of the template
+
 ## hide
 ```javascript
 vff.hide(template)
 ```
 Set “visibility” property in the template to false
+
+* template - _string_ - the name of the template
+
 ## toggle
 ```javascript
 vff.toggle(template)
 ```
 Toggle “visibility” property in the template
+
+* template - _string_ - the name of the template
+
 # Globals
 
 ## isMobile
