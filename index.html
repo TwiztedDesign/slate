@@ -222,6 +222,9 @@
             <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Introduction</a>
           </li>
           <li>
+            <a href="#getting-started" class="toc-h1 toc-link" data-title="getting-started">Getting Started</a>
+          </li>
+          <li>
             <a href="#core" class="toc-h1 toc-link" data-title="core">Core</a>
               <ul class="toc-list-h2">
                   <li>
@@ -307,12 +310,26 @@
 <p>Welcome to the Videoflow framework (or VFF ) API.</p>
 
 <p>vff is a JavaScript library designed to create graphic overlays for the Videoflow Player.</p>
-<h1 id='core'>Core</h1><h2 id='addtemplate'>addTemplate</h2><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">myData</span> <span class="o">=</span> <span class="p">{};</span>
-<span class="nx">vff</span><span class="p">.</span><span class="nx">addTemplate</span><span class="p">(</span><span class="nx">myData</span><span class="p">);</span>
+<h1 id='getting-started'>Getting Started</h1>
+<p>To start using the Videoflow Framework just include the script in you html file  </p>
+
+<p><code>&lt;script src=&quot;https://rawgit.com/TwiztedDesign/vff/master/dist/vff.js&quot;&gt;&lt;/script&gt;</code></p>
+<h1 id='core'>Core</h1><h2 id='addtemplate'>addTemplate</h2><pre class="highlight javascript tab-javascript"><code><span class="c1">// Registering a template through the vff global </span>
+<span class="kd">var</span> <span class="nx">headerData</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">title</span> <span class="p">:</span> <span class="s2">"This is a title"</span><span class="p">,</span>
+    <span class="na">subtitle</span> <span class="p">:</span> <span class="s2">"This is a subtitle"</span>    
+<span class="p">};</span>
+<span class="nx">vff</span><span class="p">.</span><span class="nx">addTemplate</span><span class="p">(</span><span class="nx">headerData</span><span class="p">);</span>
+</code></pre><pre class="highlight html tab-html"><code><span class="c">&lt;!-- Registering a template with html attribute --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">vff-template=</span><span class="s">"Header"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h1</span> <span class="na">vff-name=</span><span class="s">"title"</span><span class="nt">&gt;</span>This is a title<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;h2</span> <span class="na">vff-name=</span><span class="s">"subtitle"</span><span class="nt">&gt;</span>This is a subtitle<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </code></pre>
 <p>Register the object as a template in VFF</p>
-<h2 id='getpages'>getPages</h2><pre class="highlight javascript tab-javascript"><code>
-<span class="nx">vff</span><span class="p">.</span><span class="nx">getPages</span><span class="p">();</span>
+
+<p>There are a couple of ways to register a vff template</p>
+<h2 id='getpages'>getPages</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">vff</span><span class="p">.</span><span class="nx">getPages</span><span class="p">();</span>
 </code></pre>
 <p>Get all the project pages (for now, mainly used to build home screen overlays)</p>
 <h2 id='onupdate'>onUpdate</h2><h3 id='unused'>unused</h3><h2 id='getqueryparams'>getQueryParams</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">vff</span><span class="p">.</span><span class="nx">getQueryParams</span><span class="p">();</span>
