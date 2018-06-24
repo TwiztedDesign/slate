@@ -330,15 +330,35 @@ Name - string - element name should be at least two words, dash separated (i.e v
 <p>Emit gfx event to all open players **no fully working yet</p>
 <h2 id='onevent'>onEvent</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">vff</span><span class="p">.</span><span class="nx">onEvent</span><span class="p">(</span><span class="nx">template</span><span class="p">,</span> <span class="nx">cb</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
 <span class="nx">vff</span><span class="p">.</span><span class="nx">onEvent</span><span class="p">(</span><span class="nx">cb</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
-</code></pre><h1 id='player-control'>Player control</h1><h2 id='go'>go</h2><h2 id='next'>next</h2><h2 id='previous'>previous</h2><h2 id='home'>home</h2><h1 id='visibility'>Visibility</h1><h2 id='show'>show</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">vff</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span><span class="nx">template</span><span class="p">)</span>
+</code></pre><h1 id='player-control'>Player control</h1><h2 id='go'>go</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">vff</span><span class="p">(</span><span class="s1">'pagename'</span><span class="p">,</span> <span class="nx">timecode</span><span class="p">)</span>
+</code></pre>
+<p>Go to page</p>
+
+<ul>
+<li>target - <strong><em>string</em></strong> - target page name</li>
+<li>timecode - <strong><em>int</em></strong> - <strong><em>optional</em></strong> - target time if the target page is video</li>
+</ul>
+<h2 id='next'>next</h2><h2 id='previous'>previous</h2><h2 id='home'>home</h2><h1 id='visibility'>Visibility</h1><h2 id='show'>show</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">vff</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span><span class="nx">template</span><span class="p">)</span>
 </code></pre>
 <p>Set “visibility” property in the template to true</p>
+
+<ul>
+<li>template - <em>string</em> - the name of the template</li>
+</ul>
 <h2 id='hide'>hide</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">vff</span><span class="p">.</span><span class="nx">hide</span><span class="p">(</span><span class="nx">template</span><span class="p">)</span>
 </code></pre>
 <p>Set “visibility” property in the template to false</p>
+
+<ul>
+<li>template - <em>string</em> - the name of the template</li>
+</ul>
 <h2 id='toggle'>toggle</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">vff</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="nx">template</span><span class="p">)</span>
 </code></pre>
 <p>Toggle “visibility” property in the template</p>
+
+<ul>
+<li>template - <em>string</em> - the name of the template</li>
+</ul>
 <h1 id='globals'>Globals</h1><h2 id='ismobile'>isMobile</h2><h2 id='iscontroller'>isController</h2>
       </div>
       <div class="dark-box">
